@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+
+    <!-- Dấu sao (ngôi sao để ghim ghi chú) -->
+    <ImageView
+        android:id="@+id/note_pin"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_star_outline"
+        android:contentDescription="Pin note"
+        android:padding="4dp" />
+
+    <!-- Tiêu đề ghi chú -->
+    <TextView
+        android:id="@+id/note_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Note Title"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_weight="1" />
+
+    <!-- Dấu ba chấm -->
+    <ImageView
+        android:id="@+id/note_more_options"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_more_vert"
+        android:contentDescription="More options"
+        android:padding="4dp" />
+</LinearLayout>

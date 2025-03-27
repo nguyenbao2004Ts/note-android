@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrangChu">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="20dp"
+        android:text="Thư mục"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#000" />
+
+    <!-- Thanh tìm kiếm -->
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/title"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        android:background="#EAEAEA"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/seach" />
+
+        <EditText
+            android:id="@+id/search_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:hint="Tìm kiếm"
+            android:background="@null"
+            android:textColor="#808080"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Danh sách thư mục -->
+    <LinearLayout
+        android:id="@+id/folder_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_layout"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <!-- Mục "Ghi chú" -->
+        <LinearLayout
+            android:id="@+id/ghi_chu_button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:background="#FFF"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="openGhiChu">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/folder" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="Ghi chú"
+                android:textSize="18sp"
+                android:textColor="#000" />
+        </LinearLayout>
+
+        <!-- Mục "Đã xóa gần đây" -->
+        <LinearLayout
+            android:id="@+id/da_xoa_gan_day_button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:background="#FFF"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="openDaXoaGanDay"
+            android:layout_marginTop="1dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/trash" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="Đã xóa gần đây"
+                android:textSize="18sp"
+                android:textColor="#000" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Button đăng xuất -->
+    <Button
+        android:id="@+id/btndangSuat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="?attr/selectableItemBackground"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="4dp"
+        android:padding="10dp"
+        android:text="← Đăng Xuất"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:onClick="backToHome" />
+
+    <!-- Hiển thị tên người dùng -->
+    <TextView
+        android:id="@+id/username_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Username"
+        android:textSize="16sp"
+        android:textColor="#000" />
+</RelativeLayout>
